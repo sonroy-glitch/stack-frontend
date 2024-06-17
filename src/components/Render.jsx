@@ -25,7 +25,7 @@ const Render = () => {
   const { id } = useParams();
   useEffect(() => {
     async function call() {
-      var response = await axios.get(`http://localhost:3000/send/${id}`);
+      var response = await axios.get(`https://stack-backend-swart.vercel.app/send/${id}`);
       setSingle(response.data);
     }
     call();
@@ -37,7 +37,7 @@ const Render = () => {
       alert("Signin before submitting an answer");
     } else {
       var response = await axios.post(
-        "http://localhost:3000/api/answer",
+        "https://stack-backend-swart.vercel.app/api/answer",
         {
           id: single.id,
           answer: answer,
@@ -54,7 +54,7 @@ const Render = () => {
   async function questionUpdate() {}
   async function questionDelete() {
     var response = await axios.get(
-      "http://localhost:3000/api/delete/question",
+      "https://stack-backend-swart.vercel.app/api/delete/question",
       {
         headers: { auth, question_id: id },
       }
@@ -63,7 +63,7 @@ const Render = () => {
   }
   async function answerDelete(e) {
     const id1 = single.answer[e].id;
-    var response = await axios.get("http://localhost:3000/api/delete/answer", {
+    var response = await axios.get("https://stack-backend-swart.vercel.app/api/delete/answer", {
       headers: { auth, answer_id: id1 },
     });
     location.reload();

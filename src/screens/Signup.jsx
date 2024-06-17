@@ -56,7 +56,7 @@ const Signup = () => {
     }
     else{
       try{
-      var response=await axios.post("http://localhost:3000/auth/signup",{
+      var response=await axios.post("https://stack-backend-swart.vercel.app/auth/signup",{
         name,
         email,
         password:password1

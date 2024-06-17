@@ -29,7 +29,7 @@ async function run (){
   }
   else{
     var tag= tags.split(" ")
-    const response=await axios.post("http://localhost:3000/api/question",{
+    const response=await axios.post("https://stack-backend-swart.vercel.app/api/question",{
       title,
       description,
       tags:tag

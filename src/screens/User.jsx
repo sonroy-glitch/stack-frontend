@@ -14,7 +14,7 @@ const User = () => {
     useEffect(() => {
       async function call(){
        
-       var response = await axios.get("http://localhost:3000/api/send/user/all",{
+       var response = await axios.get("https://stack-backend-swart.vercel.app/api/send/user/all",{
         headers:{auth}
        })
        setData(response.data)

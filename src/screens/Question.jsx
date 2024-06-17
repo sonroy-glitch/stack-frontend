@@ -19,7 +19,7 @@ const Question = () => {
     useEffect(() => {
       async function call(){
        setLoading(true)
-       var data = await axios.get("http://localhost:3000/send/all")
+       var data = await axios.get("https://stack-backend-swart.vercel.app/send/all")
        setData((data.data))
        // console.log(data.data)
        setLoading(false)

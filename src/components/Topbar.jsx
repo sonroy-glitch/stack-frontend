@@ -14,7 +14,7 @@ const Topbar = () => {
     async function call(){
       
       var auth = localStorage.getItem("auth")
-      var verify= await axios.get("http://localhost:3000/verify",{
+      var verify= await axios.get("https://stack-backend-swart.vercel.app/verify",{
         headers:{auth}
       })
       // console.log(verify.data)
