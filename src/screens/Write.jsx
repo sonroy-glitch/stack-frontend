@@ -36,13 +36,15 @@ async function run (){
     },{
       headers:{auth:token}
     })
-    async function call(){
+    setTimeout(() => {
       if(response.status===200){
         navigate(`/question/${response.data.id}`)
         
       }
-    }
-    await call()
+    }, 8000);
+      
+    
+    
   }
   }
  
