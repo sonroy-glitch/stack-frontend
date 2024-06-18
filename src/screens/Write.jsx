@@ -36,10 +36,13 @@ async function run (){
     },{
       headers:{auth:token}
     })
-    if(response.status===200){
-      navigate(`/question/${response.data.id}`)
-      
+    async function call(){
+      if(response.status===200){
+        navigate(`/question/${response.data.id}`)
+        
+      }
     }
+    await call()
   }
   }
  
