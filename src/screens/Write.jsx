@@ -36,12 +36,12 @@ async function run (){
     },{
       headers:{auth:token}
     })
-    setTimeout(() => {
+    
       if(response.status===200){
         navigate(`/question/${response.data.id}`)
         
       }
-    }, 8000);
+  
       
     
     
